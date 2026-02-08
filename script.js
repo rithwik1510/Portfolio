@@ -1,5 +1,6 @@
 const revealNodes = document.querySelectorAll(".reveal");
 const counterNodes = document.querySelectorAll("[data-counter]");
+const scrollCue = document.querySelector(".scroll-cue");
 
 const revealObserver = new IntersectionObserver(
   (entries, observer) => {
@@ -46,3 +47,15 @@ const counterObserver = new IntersectionObserver(
 );
 
 counterNodes.forEach((node) => counterObserver.observe(node));
+
+const updateScrollCue = () => {
+  if (!scrollCue) return;
+  if (window.scrollY > 80) {
+    scrollCue.classList.add("hidden");
+  } else {
+    scrollCue.classList.remove("hidden");
+  }
+};
+
+updateScrollCue();
+window.addEventListener("scroll", updateScrollCue, { passive: true });
