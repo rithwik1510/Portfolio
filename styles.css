@@ -718,6 +718,59 @@ h1 {
 }
 
 @media (max-width: 700px) {
+  .nav-wrap {
+    min-height: auto;
+    row-gap: 0.62rem;
+    padding: 0.52rem 0;
+  }
+
+  .brand {
+    font-size: 1.08rem;
+  }
+
+  .nav-links {
+    gap: 0.7rem 0.95rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .nav-resume {
+    padding: 0.45rem 0.84rem;
+    font-size: 0.84rem;
+  }
+
+  .hero {
+    padding: 2.3rem 0 2.6rem;
+    gap: 1.35rem;
+  }
+
+  h1 {
+    max-width: none;
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
+  }
+
+  .lead {
+    margin: 0.82rem 0 1.15rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.55rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .proof-chips li {
+    width: 100%;
+    text-align: center;
+  }
+
   .project-grid,
   .skills-grid,
   .credentials-grid,
@@ -744,6 +797,12 @@ h1 {
     border-bottom: none;
   }
 
+  .hero-aside {
+    justify-self: center;
+    text-align: center;
+    gap: 0.56rem;
+  }
+
   .avatar-frame {
     width: min(290px, 88vw);
     aspect-ratio: 1 / 1;
@@ -755,11 +814,50 @@ h1 {
     transform: scale(1);
   }
 
+  .hero-email {
+    font-size: 0.8rem;
+    overflow-wrap: anywhere;
+  }
+
+  .section-heading h2 {
+    max-width: 100%;
+    line-height: 1.2;
+  }
+
+  .project-card,
+  .skill-block,
+  .credential-card {
+    padding: 0.9rem;
+  }
+
+  .footer-wrap {
+    padding: 2.35rem 0;
+  }
+
   .scroll-cue {
     left: 50%;
-    bottom: 0.68rem;
+    bottom: calc(0.7rem + env(safe-area-inset-bottom));
     padding: 0.5rem 0.7rem;
     font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 960px) and (orientation: landscape) {
+  .hero {
+    padding: 2rem 0 2.2rem;
+  }
+
+  .hero-aside {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .avatar-frame {
+    width: min(220px, 34vw);
+  }
+
+  .scroll-cue {
+    display: none;
   }
 }
 
